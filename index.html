@@ -1420,7 +1420,7 @@ const SITE_CONFIG = {
 
   // معرض التصوير — استبدل بصورك الحقيقية
   photography: [
-    { category: "portrait", label: "بورتريه", caption: "دراسة إضاءة — بورتريه 01", ratio: "3/4" },
+    { category: "portrait", label: "بورتريه", caption: "دراسة إضاءة — بورتريه 01", ratio: "3/4" },, image: "Picsart_26-06-14_15-30-58-435.jpg"
     { category: "street", label: "شارع", caption: "لحظة عابرة في الشارع", ratio: "4/5" },
     { category: "architecture", label: "عمارة", caption: "خطوط معمارية", ratio: "1/1" },
     { category: "experimental", label: "تجريبي", caption: "تجربة ضوء وظل", ratio: "3/4" },
@@ -1732,7 +1732,7 @@ const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)
 
   grid.innerHTML = items.map((ph,i) => `
     <figure class="masonry-item" data-cat="${ph.category}" data-idx="${i}" tabindex="0">
-      <div class="ph" style="aspect-ratio:${ph.ratio};">صورة — ${ph.label}</div>
+    <div class="ph" style="aspect-ratio:${ph.ratio}; background-image:url('${ph.image}'); background-size:cover; background-position:center;"></div>
       <figcaption>${ph.caption}</figcaption>
     </figure>
   `).join('');
